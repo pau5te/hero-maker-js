@@ -1,0 +1,40 @@
+[
+  {
+    "human": {
+      "color": "blue",
+      "traits": "Adventurous, Adaptable",
+      "ac": "0",
+      "str": "0",
+      "int": "-1",
+      "char": "+1",
+      "card": "Humans are curious beings who often venture out into the world to explore new places and meet new people. Once per long rest add +1 to your charisma roll when talking to someone."
+    },
+    "elf": {
+      "color": "green",
+      "traits": "Wise, Proud",
+      "ac": "-1",
+      "str": "0",
+      "int": "+1",
+      "char": "0",
+      "card": "Elves are ancient beings who live long enough to gain generational knowledge. Their wisdom is a source of pride and belonging in elven society. One per long rest add +1 to wisdom rolls."
+    },
+    "dwarf": {
+      "color": "red",
+      "traits": "Perservering, Sturdy",
+      "ac": "+1",
+      "str": "0",
+      "int": "0",
+      "char": "-1",
+      "card": "Dwarves are persistent in their endeavors and highly value the traditions of their ancestors. They are known for their exceptional mental and physical toughness. Once per long rest add +1 to armor class."
+    },
+    "gnome": {
+      "color": "yellow",
+      "traits": "Inventive, Deft",
+      "ac": "-1",
+      "str": "+1",
+      "int": "0",
+      "char": "0",
+      "card": "Gnomes are creative tinkerers, eager to work on new inventions and solutions. They are peaceful beings focused on their inventions. Once per long rest add +1 to strterity rolls."
+    }
+  }
+]
