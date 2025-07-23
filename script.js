@@ -8,45 +8,28 @@ let errRoot = document.getElementById("error_root");
 let rootSelect = document.querySelector(".root_select");
 let heroRoot = document.querySelector(".hero_root");
 
-// console.log(rootSelect.value);
 /* HERO NAME AND ROOT FORM*/
 
-//Save button
-// heroSaveBtn.addEventListener("click", () => {
-//   if (inp.value === "") {
-//     console.log("missing name");
-//     errName.classList.remove("hidden");
-//   } else if ((rootSelect.value = "")) {
-//     console.log("no root selected");
-//   } else if (inp.value !== "") {
-//     heroName.textContent = inp.value;
-//     heroName.classList.add("name_saved");
-//     inp.classList.add("hidden");
-//     errName.classList.add("hidden");
-//     errRoot.classList.add("hidden");
-//     rootSelect.classList.add("hidden");
-//     heroRoot.textContent = rootSelect.value;
-//   }
-// });
-
 heroSaveBtn.addEventListener("click", () => {
-  //1. if both are missing 2. if name missing 3. if root missing 4. all ok
-  if (inp.value === "" && rootSelect.value === "") {
+  // 1. if name is missing
+  if (inp.value === "") {
     console.log("missing name and root");
     errName.classList.remove("hidden");
-    errRoot.classList.remove("hidden");
-  } else if (inp.value === "") {
-    console.log("missing name");
-    errName.classList.remove("hidden");
-  } else if (rootSelect.value === "") {
+  } else if (inp.value !== "") {
+    errName.classList.add("hidden");
+  }
+  // 2. if root is missing
+  if (rootSelect.value === "") {
     console.log("missing roots");
     errRoot.classList.remove("hidden");
-  } else if (inp.value !== "" && rootSelect.value !== "") {
+  } else if (rootSelect.value !== "") {
+    errRoot.classList.add("hidden");
+  }
+  // 3. save if both ok
+  if (inp.value !== "" && rootSelect.value !== "") {
     heroName.textContent = inp.value;
     heroName.classList.add("name_saved");
     inp.classList.add("hidden");
-    errName.classList.add("hidden");
-    errRoot.classList.add("hidden");
     rootSelect.classList.add("hidden");
     heroRoot.textContent = rootSelect.value;
   }
