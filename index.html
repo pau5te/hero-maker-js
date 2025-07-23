@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Doto:wght,ROND@100..900,0..100&family=Jersey+15&family=Sono:wght,MONO@200..800,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <title>TTRPG Hero Creator</title>
+  </head>
+  <body>
+    <header>
+      <h1>SUPER AMAZING HERO MAKER</h1>
+    </header>
+
+    <main>
+      <section class="character-builder">
+        <div class="character character__visual">
+          <div class="character character__desc">
+            <p class="character__root-desc"></p>
+          </div>
+        </div>
+
+        <div class="character character__main-info">
+          <h2>Who are you?</h2>
+
+          <div class="character__info-form">
+            <form>
+              <div class="character__form name_form">
+                <label for="name">Your name:</label>
+                <input
+                  name="name"
+                  id="name_input"
+                  type="text"
+                  placeholder="NAME"
+                />
+                <span id="hero_name"></span>
+                <span class="hidden" id="error_name"
+                  >This field can't be empty</span
+                >
+                <!-- <button type="button" class="name_toggle">ACCEPT</button> -->
+              </div>
+              <div class="character__form roots_form">
+                <label for="roots">Your roots:</label>
+                <select name="roots" class="root_select">
+                  <option value="" disabled selected hidden>ROOT</option>
+                  <option value="human">HUMAN</option>
+                  <option value="elf">ELF</option>
+                  <option value="dwarf">DWARF</option>
+                  <option value="gnome">GNOME</option>
+                </select>
+                <span class="hero_root"></span>
+                <span class="hidden" id="error_root"
+                  >This field can't be empty</span
+                >
+                <!-- <button type="button" class="root_select">ACCEPT</button> -->
+              </div>
+              <div class="character__edit_form">
+                <button type="button" class="hero_btn hero_save">ACCEPT</button>
+                <button type="button" class="hero_btn hero_edit">EDIT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="stats">
+        <div class="stats__list">
+          <ul>
+            <li class="stats__list-element">
+              <p id="ac" class="stats__num"></p>
+              <p class="stats__name">AC</p>
+            </li>
+            <li class="stats__list-element">
+              <p id="str" class="stats__num"></p>
+              <p class="stats__name">STR</p>
+            </li>
+            <li class="stats__list-element">
+              <p id="int" class="stats__num"></p>
+              <p class="stats__name">INT</p>
+            </li>
+            <li class="stats__list-element">
+              <p id="char" class="stats__num"></p>
+              <p class="stats__name">CHAR</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="skills">
+        <h3>Choose your hero's class and skills</h3>
+        <div class="skills__selection">
+          <div class="skill__choices">
+            <button type="button" class="skill" id="knight">Knight</button>
+            <button type="button" class="skill" id="sage">Sage</button>
+            <button type="button" class="skill" id="assasin">Assasin</button>
+            <button type="button" class="skill" id="mage">Mage</button>
+          </div>
+          <div class="skill__desc">
+            <p></p>
+          </div>
+        </div>
+
+        <div class="skill__cards">
+          <div class="skill__card">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="skill__card">
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum
+            </p>
+          </div>
+          <div class="skill__card">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div class="skill__card">
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

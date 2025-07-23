@@ -1,0 +1,236 @@
+:root {
+  --primary-bg: #fcecc9;
+  --second-bg: #fb898d;
+  --tert-bg: #fcb0b3;
+  --light-blue: #bce0f1;
+  --font-light: #ffffffe5;
+  --font-dark: #000000b3;
+}
+* {
+  font-family: "Doto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  font-variation-settings: "ROND" 20;
+  color: #000000e5;
+}
+body {
+  margin: 0;
+  background-color: var(--primary-bg);
+}
+main {
+  padding: 20px;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  margin: 0;
+  background-color: #445e93;
+}
+h1 {
+  font-family: "Sono", monospace;
+  font-size: 54px;
+  color: var(--font-light);
+}
+h2 {
+  font-family: "Sono", monospace;
+  font-size: 32px;
+  /* font-weight: 700; */
+  font-variation-settings: "ROND" 1;
+  color: var(--font-dark);
+}
+
+/* --------------------------------------------------------------------- */
+/* CHARACTER SECTION */
+
+.character-builder {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0 30px;
+}
+
+.character {
+  width: 40%;
+  padding: 50px;
+}
+
+/* --------------------------------------------------------------------- */
+/* CHARACTER VISUAL */
+
+.character__visual {
+  background-color: var(--second-bg);
+}
+
+/* --------------------------------------------------------------------- */
+/* CHARACTER INFO */
+
+.character__main-info {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  padding: 50px;
+  background-color: var(--tert-bg);
+}
+.character__main-info-form {
+  margin-top: 20px;
+}
+.character__form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+label {
+  margin-bottom: 10px;
+}
+input {
+  height: 40px;
+  width: 390px;
+  margin-right: 50px;
+  text-align: center;
+}
+select {
+  height: 43px;
+  width: 398px;
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.name_form p {
+  width: 0px;
+}
+.name_form span.name_saved {
+  margin-right: 50px;
+  padding: 12px;
+  width: 375px;
+  background-color: pink;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.character__edit_form {
+  display: flex;
+}
+.hero_btn {
+  width: 150px;
+  padding: 13px 16px;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  background-color: var(--light-blue);
+  color: var(--font-dark);
+  font-weight: 800;
+  cursor: pointer;
+}
+.hero_save {
+  margin-right: 50px;
+}
+#error_name,
+#error_root {
+  /* margin-top: 10px; */
+  position: absolute;
+  margin: 3px 0 0 150px;
+  color: red;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------- */
+/* STATS */
+
+.stats {
+  padding: 0px 40px;
+}
+.stats__list {
+  display: flex;
+  justify-content: center;
+}
+.stats__list ul {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.stats__list-element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  width: 6.5em;
+  height: 6.5em;
+  margin: 0 50px;
+  background-color: #fcd173;
+  box-shadow: -12px -10px 0px 0px lightgrey;
+  /* border: 1px solid;
+  border-width: 1px; */
+  border-radius: calc(6.5em / 2);
+}
+.stats__list-element p {
+  margin: 0;
+}
+
+.stats__num {
+  font-size: 36px;
+  font-weight: 900;
+  font-variation-settings: "ROND" 100;
+}
+.stats__name {
+  font-size: 24px;
+}
+
+/* --------------------------------------------------------------------- */
+/* SKILLS */
+.skills {
+  margin-top: 70px;
+}
+h3 {
+  font-size: 22px;
+  text-align: center;
+}
+.skill__choices {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.skill {
+  width: 200px;
+  height: 50px;
+  margin: 0 40px;
+  list-style: none;
+}
+
+.skill__desc {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.skill-cards {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 50px;
+}
+
+.skill__card {
+  background-color: bisque;
+  max-width: 30%;
+  margin: 0 10px;
+  padding: 20px 50px;
+}
+
+/* --------------------------------------------------------------------- */
+/* media queries */
+
+/* @media (max-width: 1110px) {
+  .skill-cards {
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 500px;
+    background-color: red;
+  }
+} */
