@@ -4,11 +4,12 @@ let inp = document.getElementById("name_input");
 let heroName = document.getElementById("hero_name");
 let errName = document.getElementById("error_name");
 let errRoot = document.getElementById("error_root");
-
 let rootSelect = document.querySelector(".root_select");
 let heroRoot = document.querySelector(".hero_root");
 
 /* HERO NAME AND ROOT FORM*/
+
+//Accept button and check if forms are empty
 
 heroSaveBtn.addEventListener("click", () => {
   // 1. if name is missing
@@ -70,8 +71,9 @@ const acStat = document.getElementById("ac");
 const strStat = document.getElementById("str");
 const intStat = document.getElementById("int");
 const charStat = document.getElementById("char");
+const heroDesc = document.querySelector(".character__root-desc");
 
-//iife function //setting stats
+//iife function //setting stats and hero roots description
 (async () => {
   await loadRoots();
   rootSelect.addEventListener("change", () => {
@@ -81,6 +83,7 @@ const charStat = document.getElementById("char");
       strStat.textContent = elf.str;
       intStat.textContent = elf.int;
       charStat.textContent = elf.char;
+      heroDesc.textContent = elf.card;
     } else if (rootSelect.value === "human") {
       acStat.textContent = human.ac;
       strStat.textContent = human.str;
@@ -97,5 +100,70 @@ const charStat = document.getElementById("char");
       intStat.textContent = gnome.int;
       charStat.textContent = gnome.char;
     }
+  });
+})();
+
+/* HERO CLASS */
+
+const skillBtns = document.querySelectorAll(".skill");
+const skillCards = document.querySelectorAll(".card");
+// console.log(skillCards);
+const skillDesc = document.querySelector(".desc");
+const skillHeader = document.querySelector(".skill__header");
+
+let knight = [];
+let sage = [];
+let assasin = [];
+let mage = [];
+
+async function loadSkills() {
+  try {
+    const res = await fetch("./skills.json");
+    const skillsData = await res.json();
+    console.log("inside skills", skillsData);
+    knight = skillsData[0].knight;
+    sage = skillsData[0].sage;
+    assasin = skillsData[0].assasin;
+    mage = skillsData[0].mage;
+  } catch (error) {
+    console.log("Error loading skills");
+  }
+}
+(async () => {
+  await loadSkills();
+
+  const cardsKnight = knight.cards;
+  const cardsSage = sage.cards;
+  const cardsAssasin = assasin.cards;
+  const cardsMage = mage.cards;
+
+  skillBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (btn.textContent === "Knight") {
+        skillDesc.textContent = knight.desc;
+        skillHeader.textContent = knight.id;
+        skillCards.forEach((p, i) => {
+          p.textContent = cardsKnight[i];
+        });
+      } else if (btn.textContent === "Sage") {
+        skillDesc.textContent = sage.desc;
+        skillHeader.textContent = sage.id;
+        skillCards.forEach((p, i) => {
+          p.textContent = cardsSage[i];
+        });
+      } else if (btn.textContent === "Assasin") {
+        skillDesc.textContent = assasin.desc;
+        skillHeader.textContent = assasin.id;
+        skillCards.forEach((p, i) => {
+          p.textContent = cardsAssasin[i];
+        });
+      } else if (btn.textContent === "Mage") {
+        skillDesc.textContent = mage.desc;
+        skillHeader.textContent = mage.id;
+        skillCards.forEach((p, i) => {
+          p.textContent = cardsMage[i];
+        });
+      }
+    });
   });
 })();
