@@ -89,16 +89,19 @@ const heroDesc = document.querySelector(".character__root-desc");
       strStat.textContent = human.str;
       intStat.textContent = human.int;
       charStat.textContent = human.char;
+      heroDesc.textContent = human.card;
     } else if (rootSelect.value === "dwarf") {
       acStat.textContent = dwarf.ac;
       strStat.textContent = dwarf.str;
       intStat.textContent = dwarf.int;
       charStat.textContent = dwarf.char;
+      heroDesc.textContent = dwarf.card;
     } else if (rootSelect === "gnome") {
       acStat.textContent = gnome.ac;
       strStat.textContent = gnome.str;
       intStat.textContent = gnome.int;
       charStat.textContent = gnome.char;
+      heroDesc.textContent = gnome.card;
     }
   });
 })();

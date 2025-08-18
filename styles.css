@@ -80,6 +80,24 @@ button:hover {
   background-color: var(--second-bg);
 }
 
+.character__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.character__img img {
+  width: 40%;
+  margin: 10px;
+  padding: 10px;
+  border: 10px red groove;
+}
+
+.character__root-desc {
+  margin-top: 50px;
+  text-align: center;
+}
+
+
 /* --------------------------------------------------------------------- */
 /* CHARACTER INFO */
 
