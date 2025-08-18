@@ -1,0 +1,36 @@
+[
+  {
+    "knight": {
+      "id": "knight",
+      "desc": "Skilled fighter, proficient in melee weapons and focused on their goals.",
+      "cards": ["card1", "card2", "card3", "card4"],
+      "weapon": "Mighty sword",
+      "weapon_dmg": "1d8+4",
+      "base_skill": "Twice per battle deal 3 additional points of damage and make your oponent vulnerable."
+    },
+    "sage": {
+      "id": "sage",
+      "desc": "Wise healer, attuned to the natural world and in touch with its deities.",
+      "cards": ["card1", "card2", "card3", "card4"],
+      "weapon": "Staff",
+      "weapon_dmg": "1d6+4",
+      "base_skill": "Twice per battle use your magic to heal an ally - they recover 1d4 of their health."
+    },
+    "assasin": {
+      "id": "assasin",
+      "desc": "Shadowy presence, lurking in the dark and skilled in stealthy attacks.",
+      "cards": ["card1", "card2", "card3", "card4"],
+      "weapon": "Daggers",
+      "weapon_dmg": "2d6+1",
+      "base_skill": "If you are hidden from your opponent, you deal +1d4 damage with your primary weapon."
+    },
+    "mage": {
+      "id": "mage",
+      "desc": "Mighty scholar with vast knowledge of practical and theoretical magic",
+      "cards": ["card1", "card2", "card3", "card4"],
+      "weapon": "Wand",
+      "weapon_dmg": "1d6+4",
+      "base_skill": "Twice per battle send a burst of elemental magic and deal 1d8+4 damage to the opponent"
+    }
+  }
+]

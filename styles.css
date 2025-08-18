@@ -30,17 +30,33 @@ header {
   margin: 0;
   background-color: #445e93;
 }
-h1 {
+h1,
+h2,
+h3 {
   font-family: "Sono", monospace;
+}
+h1 {
   font-size: 54px;
   color: var(--font-light);
 }
 h2 {
-  font-family: "Sono", monospace;
   font-size: 32px;
-  /* font-weight: 700; */
-  font-variation-settings: "ROND" 1;
   color: var(--font-dark);
+}
+h3 {
+  font-size: 26px;
+  text-align: center;
+}
+button {
+  padding: 13px 16px;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  color: var(--font-dark);
+  font-weight: 800;
+  cursor: pointer;
+}
+button:hover {
+  text-decoration: underline;
 }
 
 /* --------------------------------------------------------------------- */
@@ -115,13 +131,7 @@ select {
 }
 .hero_btn {
   width: 150px;
-  padding: 13px 16px;
-  border-radius: 16px;
-  border-width: 0 0 4px;
   background-color: var(--light-blue);
-  color: var(--font-dark);
-  font-weight: 800;
-  cursor: pointer;
 }
 .hero_save {
   margin-right: 50px;
@@ -163,7 +173,7 @@ select {
   height: 6.5em;
   margin: 0 50px;
   background-color: #fcd173;
-  box-shadow: -12px -10px 0px 0px lightgrey;
+  box-shadow: -3px -3px 0px 0px #fbc141;
   /* border: 1px solid;
   border-width: 1px; */
   border-radius: calc(6.5em / 2);
@@ -186,11 +196,7 @@ select {
 .skills {
   margin-top: 70px;
 }
-h3 {
-  font-size: 22px;
-  text-align: center;
-}
-.skill__choices {
+.skills__choices {
   display: flex;
   justify-content: center;
   margin: 50px 0;
@@ -198,18 +204,33 @@ h3 {
 
 .skill {
   width: 200px;
-  height: 50px;
+  height: 60px;
   margin: 0 40px;
   list-style: none;
+  text-transform: uppercase;
 }
 
-.skill__desc {
-  display: flex;
-  justify-content: center;
+#knight {
+  background-color: #aac8fa;
+}
+#sage {
+  background-color: #a9d6cc;
+}
+#assasin {
+  background-color: #c4bcd4;
+}
+#mage {
+  background-color: #fbc1d5;
+}
+.skill__header {
+  text-transform: uppercase;
+}
+.skills__desc {
   margin-top: 40px;
+  text-align: center;
 }
 
-.skill-cards {
+.skill__cards {
   display: flex;
   justify-content: space-evenly;
   padding: 50px;
@@ -217,9 +238,9 @@ h3 {
 
 .skill__card {
   background-color: bisque;
-  max-width: 30%;
-  margin: 0 10px;
-  padding: 20px 50px;
+  width: 20%;
+  padding: 20px;
+  text-align: center;
 }
 
 /* --------------------------------------------------------------------- */
