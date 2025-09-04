@@ -84,24 +84,28 @@ const heroDesc = document.querySelector(".character__root-desc");
       intStat.textContent = elf.int;
       charStat.textContent = elf.char;
       heroDesc.textContent = elf.card;
+      heroImg.src = '/imgs/elf.png';
     } else if (rootSelect.value === "human") {
       acStat.textContent = human.ac;
       strStat.textContent = human.str;
       intStat.textContent = human.int;
       charStat.textContent = human.char;
       heroDesc.textContent = human.card;
+      heroImg.src = '/imgs/human.png';
     } else if (rootSelect.value === "dwarf") {
       acStat.textContent = dwarf.ac;
       strStat.textContent = dwarf.str;
       intStat.textContent = dwarf.int;
       charStat.textContent = dwarf.char;
       heroDesc.textContent = dwarf.card;
-    } else if (rootSelect === "gnome") {
+      heroImg.src = '/imgs/dwarf.png';
+    } else if (rootSelect.value === "gnome") {
       acStat.textContent = gnome.ac;
       strStat.textContent = gnome.str;
       intStat.textContent = gnome.int;
       charStat.textContent = gnome.char;
       heroDesc.textContent = gnome.card;
+      heroImg.src = '/imgs/gnome.png';
     }
   });
 })();
@@ -110,9 +114,10 @@ const heroDesc = document.querySelector(".character__root-desc");
 
 const skillBtns = document.querySelectorAll(".skill");
 const skillCards = document.querySelectorAll(".card");
-// console.log(skillCards);
 const skillDesc = document.querySelector(".desc");
 const skillHeader = document.querySelector(".skill__header");
+const heroImg = document.getElementById("root-img");
+const heroClass = document.getElementById("class-img");
 
 let knight = [];
 let sage = [];
@@ -145,24 +150,28 @@ async function loadSkills() {
       if (btn.textContent === "Knight") {
         skillDesc.textContent = knight.desc;
         skillHeader.textContent = knight.id;
+        heroClass.src = '/imgs/knight.png';
         skillCards.forEach((p, i) => {
           p.textContent = cardsKnight[i];
         });
       } else if (btn.textContent === "Sage") {
         skillDesc.textContent = sage.desc;
         skillHeader.textContent = sage.id;
+        heroClass.src = '/imgs/sage.png';
         skillCards.forEach((p, i) => {
           p.textContent = cardsSage[i];
         });
       } else if (btn.textContent === "Assasin") {
         skillDesc.textContent = assasin.desc;
         skillHeader.textContent = assasin.id;
+        heroClass.src = '/imgs/assasin.png';
         skillCards.forEach((p, i) => {
           p.textContent = cardsAssasin[i];
         });
       } else if (btn.textContent === "Mage") {
         skillDesc.textContent = mage.desc;
         skillHeader.textContent = mage.id;
+        heroClass.src = '/imgs/mage.png';
         skillCards.forEach((p, i) => {
           p.textContent = cardsMage[i];
         });

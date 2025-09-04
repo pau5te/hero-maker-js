@@ -86,6 +86,7 @@ button:hover {
   align-items: center;
 }
 .character__img img {
+  max-height: 200px;
   width: 40%;
   margin: 10px;
   padding: 10px;
