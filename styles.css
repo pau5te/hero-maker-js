@@ -86,8 +86,8 @@ button:hover {
   align-items: center;
 }
 .character__img img {
-  max-height: 200px;
-  width: 40%;
+  /* max-height: 200px; */
+  width: 30%;
   margin: 10px;
   padding: 10px;
   border: 10px red groove;
@@ -97,7 +97,6 @@ button:hover {
   margin-top: 50px;
   text-align: center;
 }
-
 
 /* --------------------------------------------------------------------- */
 /* CHARACTER INFO */
